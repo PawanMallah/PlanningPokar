@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "npm":"npm",
+    "install":"npm install && npm ls crypto-js",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
