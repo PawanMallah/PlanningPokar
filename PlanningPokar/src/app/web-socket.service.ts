@@ -15,7 +15,8 @@ export class WebSocketService {
   readonly url :String = 'https://planning-server.vercel.app/';
   constructor() { 
     this.socket = io(this.url,{
-     
+      path:''.
+      secure:true,
       transports: ['websocket']});
   }
   join(data){
