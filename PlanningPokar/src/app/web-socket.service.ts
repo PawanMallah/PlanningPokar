@@ -14,7 +14,10 @@ export class WebSocketService {
   //readonly url : string ='http://planingserver.azurewebsites.net';
   readonly url :String = 'https://planning-server.vercel.app/';
   constructor() { 
-    this.socket = io(this.url);
+    this.socket = io(this.url,{
+      path: '/socket.io',
+      transports: ['websocket'],
+      secure: true});
   }
   join(data){
     this.socket.emit('join',data);
