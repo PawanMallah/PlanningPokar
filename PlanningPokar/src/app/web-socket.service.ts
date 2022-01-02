@@ -12,10 +12,10 @@ export class WebSocketService {
   socket :any;
   //readonly url : string ='http://10.245.14.75/:1337';
   //readonly url : string ='http://planingserver.azurewebsites.net';
-  readonly url :String = 'https://planning-server.vercel.app/';
+  readonly url :String = 'planning-server.herokuapp.com/';
   constructor() { 
     this.socket = io(this.url,{
-      path:'',
+      path:'/socket.io',
       secure:true,
       transports: ['websocket']});
   }
